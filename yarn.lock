@@ -1273,7 +1273,7 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.5.tgz#105c37d9d9620ce69b7f692a20c821bf1ad2cbf9"
   integrity sha512-sTcG+QZ6fdEUObICavU+aB3Mp8HY4n14wYHdxK4fXjPmv3PXZZeY5RaguJmGyeH/CJQhX3fqKUtS4qc1LoHwhQ==
 
-"@hookform/resolvers@^3.1.1":
+"@hookform/resolvers@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.9.0.tgz#cf540ac21c6c0cd24a40cf53d8e6d64391fb753d"
   integrity sha512-bU0Gr4EepJ/EQsH/IwEzYLsT/PEj5C0ynLQ4m+GSHS+xKH4TfSelhluTgOaoc4kA5s7eCsQbM4wvZLzELmWzUg==
@@ -9684,7 +9684,7 @@ yocto-queue@^1.0.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-1.1.1.tgz#fef65ce3ac9f8a32ceac5a634f74e17e5b232110"
   integrity sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==
 
-yup@^1.2.0:
+yup@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/yup/-/yup-1.4.0.tgz#898dcd660f9fb97c41f181839d3d65c3ee15a43e"
   integrity sha512-wPbgkJRCqIf+OHyiTBQoJiP5PFuAXaWiJK6AmYkzQAh5/c2K9hzSApBZG5wV9KoKSePF7sAxmNSvh/13YHkFDg==
