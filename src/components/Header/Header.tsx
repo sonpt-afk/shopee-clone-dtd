@@ -3,18 +3,21 @@ import { useState, useRef, useContext } from 'react'
 import { useFloating, FloatingPortal, arrow, shift, offset } from '@floating-ui/react-dom-interactions'
 import { motion, AnimatePresence } from 'framer-motion'
 import Popover from '../Popover'
-import { clearAccessTokenFromLS } from 'src/utils/auth'
+import { clearLS } from 'src/utils/auth'
 import { useMutation } from '@tanstack/react-query'
 import { logoutAccount } from 'src/apis/auth.api'
 import { AppContext } from 'src/contexts/app.context'
+import path from 'src/constants/path'
 
 export default function Header() {
-  const { setIsAuthenticated, isAuthenticated } = useContext(AppContext)
-
+  const { setIsAuthenticated, isAuthenticated, setProfile, profile } = useContext(AppContext)
+  useContext(AppContext)
+  console.log('prfile', profile)
   const logoutMutation = useMutation({
     mutationFn: logoutAccount,
     onSuccess: () => {
       setIsAuthenticated(false)
+      setProfile(null)
     }
   })
 
@@ -80,7 +83,7 @@ export default function Header() {
               className='flex items-center py-1 hover:text-gray-300 cursor-pointer ml-6'
               renderPopover={
                 <div className='bg-white relative shadow-md rounded-sm'>
-                  <Link to='/profile' className='block bg-white p-4 hover:text-orange'>
+                  <Link to={path.profile} className='block bg-white p-4 hover:text-orange'>
                     Tài khoản
                   </Link>
                   <Link className='block bg-white p-4 hover:text-orange' to='/'>
@@ -89,7 +92,7 @@ export default function Header() {
                   <button
                     onClick={() => {
                       handleLogout()
-                      // clearAccessTokenFromLS()
+                      // clearLS()
                     }}
                     className='block bg-white p-4 hover:text-orange'
                   >
@@ -105,16 +108,16 @@ export default function Header() {
                   className='w-full h-full object-cover rounded-full'
                 />
               </div>
-              <div>carterpham</div>
+              <div>{profile?.email}</div>
             </Popover>
           )}
           {!isAuthenticated && (
             <div className='flex items-center'>
-              <Link to='/register' className='mx-3 capitalize hover:text-white/70'>
+              <Link to={path.register} className='mx-3 capitalize hover:text-white/70'>
                 Đăng ký
               </Link>
               <div className='border-r-[1px] border-r-white/40 h-4' />
-              <Link to='/login' className='mx-3 capitalize hover:text-white/70'>
+              <Link to={path.login} className='mx-3 capitalize hover:text-white/70'>
                 Đăng nhập
               </Link>
             </div>
@@ -156,7 +159,7 @@ export default function Header() {
           </form>
           <div className='cols-span-1'>
             <Popover
-              initialOpen
+              initialOpen={false}
               renderPopover={
                 <div className='bg-white relative shadow-md rounded-sm max-w-[400px] text-sm'>
                   <div className='p'>
