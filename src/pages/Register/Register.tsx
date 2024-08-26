@@ -69,7 +69,7 @@ export default function Register() {
                 type='email'
                 name='email'
                 register={register}
-                errorMessages={errors.email?.message}
+                errorMessage={errors.email?.message}
                 placeholder='Email'
                 className='mt-8'
                 autoComplete='on'
@@ -79,7 +79,7 @@ export default function Register() {
                 type='password'
                 name='password'
                 register={register}
-                errorMessages={errors.password?.message}
+                errorMessage={errors.password?.message}
                 placeholder='Password'
                 autoComplete='on'
                 className='mt-3'
@@ -88,7 +88,7 @@ export default function Register() {
                 type='password'
                 name='confirm_password'
                 register={register}
-                errorMessages={errors.confirm_password?.message}
+                errorMessage={errors.confirm_password?.message}
                 placeholder='Nhập lại password'
                 autoComplete='on'
                 className='mt-3'

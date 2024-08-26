@@ -1,10 +1,10 @@
 import React from 'react'
 import AsideFilter from './AsideFilter'
 import SortProductList from './SortProductList'
-import Product from './Product/Product'
+import Product from './Product'
 export default function ProductList() {
   return (
-    <div className='bg-gray-200 py-6'>
+    <div className='bg-gray-100 py-6'>
       <div className='container'>
         <div className='grid grid-cols-12	gap-6'>
           <div className='col-span-3'>
@@ -17,7 +17,7 @@ export default function ProductList() {
                 .fill(0)
                 .map((_, index) => (
                   <div className='col-span-1' key={index}>
-                    <Product></Product>
+                    <Product product={product}></Product>
                   </div>
                 ))}
             </div>

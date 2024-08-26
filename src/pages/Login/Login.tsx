@@ -66,7 +66,7 @@ export default function Login() {
                 type='email'
                 name='email'
                 register={register}
-                errorMessages={errors.email?.message}
+                errorMessage={errors.email?.message}
                 placeholder='Email'
                 className='mt-8'
                 autoComplete='on'
@@ -76,7 +76,7 @@ export default function Login() {
                 type='password'
                 name='password'
                 register={register}
-                errorMessages={errors.password?.message}
+                errorMessage={errors.password?.message}
                 placeholder='Password'
                 autoComplete='on'
                 className='mt-3'
